@@ -1,5 +1,4 @@
 ## Al-Quds Lana Mobile Store Website
-
 This is an e-commerce and service platform for Al-Quds Lana Mobile Shop, Zarqa, Jordan.
 ---
 ## Overview
