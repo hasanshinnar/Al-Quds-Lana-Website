@@ -1,7 +1,13 @@
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import create_engine
+from dotenv import load_dotenv
+import os , psycopg2 
+engine = os.getenv('DATABASE_URL')
+if not engine:
+    engine = create_engine('postgresql+psycopg2://DB_USER:DB_PASSWORD@DB_HOST/DB_NAME')
 
 db = SQLAlchemy()
-
+load_dotenv()
 
 class User(db.Model):
     __tablename__ = "users"
@@ -11,3 +17,4 @@ class User(db.Model):
 
     def __repr__(self):
         return f"<User {self.username}>"
+
